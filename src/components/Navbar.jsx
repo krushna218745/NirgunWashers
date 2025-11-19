@@ -1,0 +1,117 @@
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
+import './Navbar.css'
+import logoMark from '../../images/WhatsApp Image 2025-11-15 at 22.07.44_1a05f13b.jpg'
+import { useLanguage } from '../context/LanguageContext'
+import { translations } from '../i18n/translations'
+
+export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false)
+  const { language, setLanguage } = useLanguage()
+  const t = translations[language].nav
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen)
+  }
+
+  const closeMenu = () => {
+    setIsOpen(false)
+  }
+
+  return (
+    <nav className="navbar">
+      <div className="navbar-container">
+        <Link to="/" className="navbar-logo" onClick={closeMenu}>
+          <img src={logoMark} alt="Nirgun Washers logo" className="logo-mark" />
+          <span className="logo-text">
+            <span className="logo-title">Nirgun Washers</span>
+            <span className="logo-tagline">{t.brandTagline}</span>
+          </span>
+        </Link>
+
+        <button
+          className={`menu-toggle ${isOpen ? 'active' : ''}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div className="navbar-right">
+          <ul className={`nav-menu ${isOpen ? 'active' : ''}`}>
+            <li className="nav-item">
+              <Link to="/" className="nav-link" onClick={closeMenu}>
+                {t.home}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/about" className="nav-link" onClick={closeMenu}>
+                {t.about}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/catalog" className="nav-link" onClick={closeMenu}>
+                {t.services}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/maps" className="nav-link" onClick={closeMenu}>
+                {t.location}
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link to="/contact" className="nav-link" onClick={closeMenu}>
+                {t.contact}
+              </Link>
+            </li>
+            <li className="nav-item nav-cta-mobile">
+              <div className="language-picker mobile">
+                <label htmlFor="language-select-mobile">{t.languageLabel}</label>
+                <select
+                  id="language-select-mobile"
+                  value={language}
+                  onChange={(e) => setLanguage(e.target.value)}
+                  aria-label={t.languageLabel}
+                >
+                  <option value="en">English</option>
+                  <option value="hi">हिन्दी</option>
+                  <option value="mr">मराठी</option>
+                </select>
+              </div>
+            </li>
+            <li className="nav-item nav-cta-mobile">
+              <Link to="/contact" className="nav-cta" onClick={closeMenu}>
+                {t.bookPickup}
+              </Link>
+            </li>
+          </ul>
+
+          <div className="nav-cta-desktop">
+            <div className="language-picker">
+              <label htmlFor="language-select">{t.languageLabel}</label>
+              <select
+                id="language-select"
+                value={language}
+                onChange={(e) => setLanguage(e.target.value)}
+                aria-label={t.languageLabel}
+              >
+                <option value="en">English</option>
+                <option value="hi">हिन्दी</option>
+                <option value="mr">मराठी</option>
+              </select>
+            </div>
+            <a href="tel:+919876543210" className="nav-phone">
+              {t.phone}
+            </a>
+            <Link to="/contact" className="nav-cta">
+              {t.bookPickup}
+            </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
+  )
+}

@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:wght@600&display=swap');
+
+:root {
+  --color-deep: #1f1f2b;
+  --color-ink: #2b2c34;
+  --color-muted: #6b7280;
+  --color-soft: #f4f6fb;
+  --color-panel: #ffffff;
+  --color-accent: #0091c7;
+  --color-accent-dark: #00668d;
+  --color-accent-soft: #e0f4ff;
+  --color-gold: #f6c343;
+  --shadow-sm: 0 4px 12px rgba(21, 31, 44, 0.08);
+  --shadow-lg: 0 30px 80px rgba(15, 23, 42, 0.18);
+  --radius-lg: 28px;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  font-family: 'Manrope', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  color: var(--color-ink);
+  background: radial-gradient(circle at 20% 20%, rgba(0, 145, 199, 0.12), transparent 45%),
+    radial-gradient(circle at 80% 0, rgba(246, 195, 67, 0.18), transparent 40%),
+    linear-gradient(180deg, #f8fbff 0%, #eef2f7 100%);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-family: inherit;
+  background: none;
+}
+
+main {
+  width: min(1200px, 100% - 3rem);
+  margin: 0 auto;
+}
+
+.page-eyebrow {
+  font-size: 13px;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--color-accent-dark);
+  font-weight: 700;
+}
+
+.page-heading {
+  font-size: clamp(2.4rem, 4vw, 3.5rem);
+  line-height: 1.2;
+  color: var(--color-deep);
+  font-family: 'Playfair Display', 'Times New Roman', serif;
+}
+
+.page-subheading {
+  color: var(--color-muted);
+  max-width: 720px;
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 102, 141, 0.4);
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 102, 141, 0.65);
+}
+
+::selection {
+  background: var(--color-accent);
+  color: #fff;
+}
