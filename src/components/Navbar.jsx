@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import './Navbar.css'
-import logoMark from '../../images/WhatsApp Image 2025-11-15 at 22.07.44_1a05f13b.jpg'
+import logoMark from '../../images/IMG-20251115-WA0028.jpg'
 import { useLanguage } from '../context/LanguageContext'
 import { translations } from '../i18n/translations'
 
@@ -23,10 +23,6 @@ export default function Navbar() {
       <div className="navbar-container">
         <Link to="/" className="navbar-logo" onClick={closeMenu}>
           <img src={logoMark} alt="Nirgun Washers logo" className="logo-mark" />
-          <span className="logo-text">
-            <span className="logo-title">Nirgun Washers</span>
-            <span className="logo-tagline">{t.brandTagline}</span>
-          </span>
         </Link>
 
         <button
@@ -91,20 +87,21 @@ export default function Navbar() {
 
           <div className="nav-cta-desktop">
             <div className="language-picker">
-              <label htmlFor="language-select">{t.languageLabel}</label>
               <select
                 id="language-select"
                 value={language}
                 onChange={(e) => setLanguage(e.target.value)}
                 aria-label={t.languageLabel}
+                title="Select Language"
               >
-                <option value="en">English</option>
-                <option value="hi">हिन्दी</option>
-                <option value="mr">मराठी</option>
+                <option value="en">EN</option>
+                <option value="hi">हिं</option>
+                <option value="mr">मर</option>
               </select>
+              <span className="language-icon">🌐</span>
             </div>
-            <a href="tel:+919876543210" className="nav-phone">
-              {t.phone}
+            <a href="tel:+917770099299" className="nav-phone" title="Call +91 77700 99299" aria-label="Call us">
+              <span className="phone-icon">📞</span>
             </a>
             <Link to="/contact" className="nav-cta">
               {t.bookPickup}

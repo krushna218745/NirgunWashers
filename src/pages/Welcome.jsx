@@ -71,21 +71,44 @@ export default function Welcome() {
         </div>
       </section>
 
-      <section className="features">
-        <div className="features-container">
-          <div className="section-header">
-            <p className="page-eyebrow">{t.signatureEyebrow}</p>
-            <h2>{t.signatureHeading}</h2>
-            <p className="section-copy">{t.signatureCopy}</p>
-          </div>
-          <div className="features-grid">
-            {t.highlightServices.map(({ title, copy }) => (
-              <article key={title} className="feature-card">
-                <div className="feature-icon"></div>
-                <h3>{title}</h3>
-                <p>{copy}</p>
-              </article>
-            ))}
+      <section className="service-flow">
+        <div className="service-flow-container">
+          <h2 className="service-flow-heading">How It Works</h2>
+          <div className="service-flow-steps">
+            <div className="flow-step">
+              <div className="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2v4M12 18v4M6 12H2M22 12h-4M19.07 4.93l-2.83 2.83M7.76 16.24l-2.83 2.83M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83"/>
+                  <path d="M12 8 L8 12 L12 16 L16 12 Z"/>
+                </svg>
+              </div>
+              <div className="flow-number">1</div>
+              <h3>Visit Us</h3>
+              <p>Bring your garments to our facility at your convenience.</p>
+            </div>
+            <div className="flow-step">
+              <div className="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M6 19c0-3.5 2-6 6-6s6 2.5 6 6"/>
+                  <path d="M12 13V8"/>
+                  <path d="M9 8c0-1.5 1.5-3 3-3s3 1.5 3 3"/>
+                </svg>
+              </div>
+              <div className="flow-number">2</div>
+              <h3>Expert Cleaning</h3>
+              <p>Handled by certified textile & couture specialists with care.</p>
+            </div>
+            <div className="flow-step">
+              <div className="flow-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M12 2L4 6v6c0 5 8 10 8 10s8-5 8-10V6l-8-4z"/>
+                  <path d="M9 12l2 2 4-4"/>
+                </svg>
+              </div>
+              <div className="flow-number">3</div>
+              <h3>Delivery</h3>
+              <p>Fresh, crisp, ready-to-wear clothing delivered to you.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -111,21 +134,30 @@ export default function Welcome() {
         </div>
       </section>
 
-      <section className="cta-section">
-        <div className="cta-container">
-          <div>
-            <p className="page-eyebrow">{t.ctaEyebrow}</p>
-            <h2>{t.ctaHeading}</h2>
-            <p>{t.ctaCopy}</p>
+      <section className="pricing-preview">
+        <div className="pricing-preview-container">
+          <h2>Starting Prices</h2>
+          <div className="pricing-grid">
+            <div className="price-item">
+              <div className="price-label">Wash & Iron</div>
+              <div className="price-value">₹99<span className="price-unit">/kg</span></div>
+            </div>
+            <div className="price-item">
+              <div className="price-label">Dry Cleaning</div>
+              <div className="price-value">₹80</div>
+            </div>
+            <div className="price-item">
+              <div className="price-label">Saree Cleaning</div>
+              <div className="price-value">₹220</div>
+            </div>
+            <div className="price-item">
+              <div className="price-label">Bedding</div>
+              <div className="price-value">₹120<span className="price-unit">/kg</span></div>
+            </div>
           </div>
-          <div className="cta-actions">
-            <Link to="/catalog" className="btn btn-large">
-              {t.ctaPrimary}
-            </Link>
-            <a href="tel:+919876543210" className="cta-link">
-              {t.ctaLink}
-            </a>
-          </div>
+          <Link to="/catalog" className="pricing-link">
+            View Full Pricing →
+          </Link>
         </div>
       </section>
     </main>

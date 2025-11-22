@@ -35,7 +35,7 @@ export default function Contact() {
     }, 3000)
   }
 
-  const whatsappNumber = '919876543210'
+  const whatsappNumber = '917770099299'
   const whatsappMessage = 'Hello Nirgun Washers, I would like to inquire about your services.'
   const whatsappLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`
 
@@ -48,95 +48,18 @@ export default function Contact() {
 
       <section className="contact-content">
         <div className="contact-container">
-          <div className="contact-form-section">
-            <h2>{t.formHeading}</h2>
-            <form className="contact-form" onSubmit={handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="name">{t.labels.name}</label>
-                <input
-                  type="text"
-                  id="name"
-                  name="name"
-                  value={formData.name}
-                  onChange={handleChange}
-                  placeholder={t.placeholders.name}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="email">{t.labels.email}</label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder={t.placeholders.email}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="phone">{t.labels.phone}</label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  placeholder={t.placeholders.phone}
-                  required
-                />
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="service">{t.labels.service}</label>
-                <select
-                  id="service"
-                  name="service"
-                  value={formData.service}
-                  onChange={handleChange}
-                >
-                  <option value="">{t.placeholders.service}</option>
-                  <option value="general">{t.serviceOptions.general}</option>
-                  <option value="ironing">{t.serviceOptions.ironing}</option>
-                  <option value="dry-cleaning">{t.serviceOptions.dry}</option>
-                  <option value="special">{t.serviceOptions.special}</option>
-                  <option value="pickup">{t.serviceOptions.pickup}</option>
-                </select>
-              </div>
-
-              <div className="form-group">
-                <label htmlFor="message">{t.labels.message}</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  placeholder={t.placeholders.message}
-                  rows="5"
-                  required
-                ></textarea>
-              </div>
-
-              <button type="submit" className="submit-btn">{t.submit}</button>
-              {submitted && <p className="success-msg">{t.success}</p>}
-            </form>
-          </div>
-
           <div className="contact-info-section">
             <h2>{t.infoHeading}</h2>
             
             <div className="info-box">
               <h4>{t.labels.phone.replace(' *', '')}</h4>
-              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              <p><a href="tel:+917770099299">+91 77700 99299</a></p>
               <p className="small-text">{t.phoneNote}</p>
             </div>
 
             <div className="info-box">
               <h4>{t.labels.email.replace(' *', '')}</h4>
-              <p><a href="mailto:info@nirgunwashers.com">info@nirgunwashers.com</a></p>
+              <p><a href="mailto:nirgunwashers@gmail.com">nirgunwashers@gmail.com</a></p>
               <p className="small-text">{t.emailNote}</p>
             </div>
 

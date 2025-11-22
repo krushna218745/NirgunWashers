@@ -7,9 +7,9 @@ export const translations = {
       services: 'Services',
       location: 'Location',
       contact: 'Contact',
-      bookPickup: 'Book a Pickup',
+      bookPickup: 'Contact Us',
       languageLabel: 'Language',
-      phone: '+91 98765 43210'
+      phone: '+91 77700 99299'
     },
     welcome: {
       eyebrow: 'Premium washers · laundry · dry cleaners',
@@ -18,12 +18,12 @@ export const translations = {
       heroSubtitle:
         'Full-stack laundry management, wet cleaning labs, and couture dry care tailored for professional washers, neighbourhood laundromats, and on-demand dry-clean partners who need trusted results.',
       primaryCta: 'Explore Services',
-      secondaryCta: 'Arrange a Pickup',
+      secondaryCta: 'Contact Us',
       badges: ['Certified Fabric Specialists', 'ISO 9001 Facility', 'Express 6-hr Cycle'],
       stats: [
         { value: '25+', label: 'Years of garment expertise' },
         { value: '4.9★', label: 'Rated across 1k+ clients' },
-        { value: '72 mins', label: 'Average pickup response' },
+        { value: '100%', label: 'Customer satisfaction' },
         { value: '100%', label: 'Eco-safe detergents' }
       ],
       signatureEyebrow: 'Signature programs',
@@ -45,7 +45,7 @@ export const translations = {
         },
         {
           title: 'On-Demand Logistics',
-          copy: 'Smart routing across the city for ultra-fast pickup and delivery slots powered by live tracking.'
+          copy: 'Convenient location in the city for easy drop-off and collection of your garments.'
         }
       ],
       journeyEyebrow: 'Experience design',
@@ -54,8 +54,8 @@ export const translations = {
         'Every fabric receives its own protocol, signed off by textile experts and tracked through our digital operations board until delivery confirmation.',
       journeySteps: [
         {
-          title: 'White-Glove Pickup',
-          text: 'Scheduled doorstep collection with garment audit and RFID tagging.'
+          title: 'Drop-Off',
+          text: 'Visit our facility with garment audit and tagging.'
         },
         {
           title: 'Fabric Diagnostics',
@@ -73,7 +73,7 @@ export const translations = {
       ctaEyebrow: 'Ready when you are',
       ctaHeading: 'Discover our professional laundry solutions',
       ctaCopy:
-        'Choose a curated plan, schedule a white-glove pickup, or speak with our garment director today.',
+        'Choose a curated plan, visit our facility, or speak with our garment director today.',
       ctaPrimary: 'View Services',
       ctaLink: 'Talk to operations'
     },
@@ -136,83 +136,110 @@ export const translations = {
         {
           id: 1,
           category: 'general',
-          name: 'Basic Wash',
-          description: 'Standard washing and drying service',
-          price: 150,
+          name: 'Wash & Fold',
+          description: 'Standard washing and folding service',
+          price: 69,
           unit: 'per kg',
-          features: ['Wash and Dry', 'Standard detergent', '24-48 hours delivery']
+          features: ['Professional wash', 'Neatly folded', 'Fresh & clean']
         },
         {
           id: 2,
           category: 'general',
-          name: 'Wash and Fold',
-          description: 'Complete washing and folding service',
-          price: 200,
+          name: 'Wash & Iron',
+          description: 'Complete washing and ironing service',
+          price: 99,
           unit: 'per kg',
-          features: ['Wash and Fold', 'Premium detergent', '24-48 hours delivery']
+          features: ['Wash and Iron', 'Crisp finish', 'Premium care']
         },
         {
           id: 3,
-          category: 'ironing',
-          name: 'Ironing Service',
-          description: 'Professional ironing for all garments',
-          price: 100,
+          category: 'general',
+          name: 'Bedsheet/Blanket Wash',
+          description: 'Deep cleaning for bedding items',
+          price: 120,
           unit: 'per kg',
-          features: ['Steam iron', 'Expert handling', 'Premium finish']
+          features: ['Deep clean', 'Sanitized', 'Soft finish']
         },
         {
           id: 4,
           category: 'ironing',
-          name: 'Wash and Iron',
-          description: 'Washing followed by professional ironing',
-          price: 300,
-          unit: 'per kg',
-          features: ['Wash and Iron', 'Steam pressed', 'Premium quality']
+          name: 'Ironing',
+          description: 'Professional ironing service',
+          price: '10',
+          unit: 'per piece',
+          features: ['Steam iron', 'Expert pressing', 'Perfect finish']
         },
         {
           id: 5,
-          category: 'dry-clean',
-          name: 'Dry Cleaning',
-          description: 'Professional dry cleaning for delicate items',
-          price: 250,
-          unit: 'per piece',
-          features: ['Dry clean', 'Delicate care', 'Express available']
+          category: 'general',
+          name: 'Quilt Wash',
+          description: 'Specialized cleaning for quilts',
+          price: 150,
+          unit: 'per kg',
+          features: ['Gentle wash', 'Fluffed & fresh', 'Hygienic clean']
         },
         {
           id: 6,
           category: 'dry-clean',
-          name: 'Formal Wear Cleaning',
-          description: 'Specialized service for suits and formal attire',
-          price: 400,
+          name: 'Dry Cleaning',
+          description: 'Professional dry cleaning service',
+          price: '80',
           unit: 'per piece',
-          features: ['Premium dry clean', 'Stain removal', 'Perfect finish']
+          features: ['Expert dry clean', 'Stain removal', 'Premium finish']
         },
         {
           id: 7,
-          category: 'special',
-          name: 'Bedding Service',
-          description: 'Washing and ironing of bed linens',
-          price: 500,
-          unit: 'per set',
-          features: ['Complete bedding', 'Deep wash', 'Sanitized']
+          category: 'dry-clean',
+          name: 'Saree Dry Cleaning',
+          description: 'Specialized care for sarees',
+          price: '220',
+          unit: 'per piece',
+          features: ['Delicate handling', 'Color protection', 'Perfect drape']
         },
         {
           id: 8,
-          category: 'special',
-          name: 'Curtain Cleaning',
-          description: 'Professional cleaning for curtains and drapes',
-          price: 800,
-          unit: 'per panel',
-          features: ['Gentle wash', 'Pressed finish', 'On-site pickup']
+          category: 'dry-clean',
+          name: 'Blazer Dry Cleaning',
+          description: 'Premium cleaning for blazers',
+          price: '220',
+          unit: 'per piece',
+          features: ['Shape retention', 'Professional finish', 'Stain treatment']
         },
         {
           id: 9,
           category: 'special',
-          name: 'Express 2-Hour Service',
-          description: 'Expedited service for urgent requirements',
-          price: 350,
+          name: 'Shoe Cleaning',
+          description: 'Expert shoe cleaning service',
+          price: '250',
+          unit: 'per pair',
+          features: ['Deep cleaning', 'Odor removal', 'Polish & shine']
+        },
+        {
+          id: 10,
+          category: 'special',
+          name: 'Sofa Cleaning',
+          description: 'Professional upholstery cleaning',
+          price: 300,
+          unit: 'per seat',
+          features: ['Deep clean', 'Stain removal', 'Fresh & sanitized']
+        },
+        {
+          id: 11,
+          category: 'special',
+          name: 'Curtains Cleaning',
+          description: 'Gentle cleaning for curtains',
+          price: 130,
           unit: 'per kg',
-          features: ['2-hour delivery', 'Priority handling', 'Premium care']
+          features: ['Gentle wash', 'Color safe', 'Pressed finish']
+        },
+        {
+          id: 12,
+          category: 'special',
+          name: 'Helmet Cleaning',
+          description: 'Specialized helmet cleaning',
+          price: '150',
+          unit: 'per piece',
+          features: ['Deep sanitization', 'Odor removal', 'Like new finish']
         }
       ],
       infoHeading: 'Service Information',
@@ -230,13 +257,13 @@ export const translations = {
       buttons: { '2d': '2D Map View', '3d': '3D Map View' },
       mapNote: '3D view requires Google Earth. Click the 3D button in the embedded map.',
       locationName: 'Nirgun Washers',
-      addressLine: 'Your Address Here, City, State - Pin Code',
+      addressLine: 'Shop No. 135/6, Opp. Akurdi Railway Station (Backside), Near Vaishno Devi Mandir, Gurudwara Road, Akurdi, Pimpri-Chinchwad, Maharashtra 411033',
       contact: {
         phoneLabel: 'Phone',
         emailLabel: 'Email',
         hoursLabel: 'Business Hours',
-        phoneValue: '+91 98765 43210',
-        emailValue: 'info@nirgunwashers.com',
+        phoneValue: '+91 77700 99299',
+        emailValue: 'nirgunwashers@gmail.com',
         hoursValue: 'Monday - Sunday: 8:00 AM - 8:00 PM'
       },
       directions: 'Get Directions',
@@ -270,8 +297,7 @@ export const translations = {
         general: 'General Laundry',
         ironing: 'Ironing Service',
         dry: 'Dry Cleaning',
-        special: 'Special Services',
-        pickup: 'Pickup and Delivery'
+        special: 'Special Services'
       },
       submit: 'Submit Inquiry',
       success: 'Message submitted successfully. We will contact you shortly.',
@@ -279,7 +305,7 @@ export const translations = {
       phoneNote: 'Business Hours: Monday - Sunday, 8:00 AM - 8:00 PM',
       emailNote: 'Response time: Within 24 hours',
       addressHeading: 'Address',
-      addressLines: ['Your Business Address', 'City, State - Postal Code', 'Operating Hours: 8:00 AM - 8:00 PM Daily'],
+      addressLines: ['Shop No. 135/6, Opp. Akurdi Railway Station (Backside)', 'Near Vaishno Devi Mandir, Gurudwara Road, Akurdi', 'Pimpri-Chinchwad, Maharashtra 411033', 'Operating Hours: 8:00 AM - 8:00 PM Daily'],
       whatsappHeading: 'WhatsApp',
       whatsappText: 'Connect with us via WhatsApp for quick assistance',
       whatsappButton: 'Message on WhatsApp',
@@ -306,9 +332,9 @@ export const translations = {
       services: 'सेवाएँ',
       location: 'स्थान',
       contact: 'संपर्क',
-      bookPickup: 'पिकअप बुक करें',
+      bookPickup: 'हमसे संपर्क करें',
       languageLabel: 'भाषा',
-      phone: '+91 98765 43210'
+      phone: '+91 77700 99299'
     },
     welcome: {
       eyebrow: 'प्रीमियम वॉशर · लॉन्ड्री · ड्राई क्लीनर',
@@ -528,13 +554,13 @@ export const translations = {
       buttons: { '2d': '2D मानचित्र दृश्य', '3d': '3D मानचित्र दृश्य' },
       mapNote: '3D दृश्य के लिए Google Earth आवश्यक है। एम्बेडेड मानचित्र में 3D बटन दबाएँ।',
       locationName: 'निरगुन वॉशर्स',
-      addressLine: 'आपका पता यहाँ, शहर, राज्य - पिन कोड',
+      addressLine: 'Shop No. 135/6, Opp. Akurdi Railway Station (Backside), Near Vaishno Devi Mandir, Gurudwara Road, Akurdi, Pimpri-Chinchwad, Maharashtra 411033',
       contact: {
-        phoneLabel: 'फ़ोन',
+        phoneLabel: 'फोन',
         emailLabel: 'ईमेल',
-        hoursLabel: 'कार्य समय',
-        phoneValue: '+91 98765 43210',
-        emailValue: 'info@nirgunwashers.com',
+        hoursLabel: 'व्यावसायिक घंटे',
+        phoneValue: '+91 77700 99299',
+        emailValue: 'nirgunwashers@gmail.com',
         hoursValue: 'सोमवार - रविवार: सुबह 8:00 - रात 8:00'
       },
       directions: 'दिशाएँ प्राप्त करें',
@@ -568,8 +594,7 @@ export const translations = {
         general: 'जनरल लॉन्ड्री',
         ironing: 'इस्त्री सेवा',
         dry: 'ड्राई क्लीनिंग',
-        special: 'विशेष सेवाएँ',
-        pickup: 'पिकअप और डिलीवरी'
+        special: 'विशेष सेवाएँ'
       },
       submit: 'अनुरोध भेजें',
       success: 'संदेश सफलतापूर्वक भेजा गया। हम जल्द संपर्क करेंगे।',
@@ -577,7 +602,7 @@ export const translations = {
       phoneNote: 'व्यवसाय समय: सोमवार - रविवार, सुबह 8:00 - रात 8:00',
       emailNote: 'प्रतिक्रिया समय: 24 घंटों के भीतर',
       addressHeading: 'पता',
-      addressLines: ['आपका व्यवसाय पता', 'शहर, राज्य - पिन कोड', 'कार्य समय: रोज़ सुबह 8:00 - रात 8:00'],
+      addressLines: ['Shop No. 135/6, Opp. Akurdi Railway Station (Backside)', 'Near Vaishno Devi Mandir, Gurudwara Road, Akurdi', 'Pimpri-Chinchwad, Maharashtra 411033', 'कार्य समय: रोज़ सुबह 8:00 - रात 8:00'],
       whatsappHeading: 'व्हाट्सऐप',
       whatsappText: 'तेज़ सहायता के लिए व्हाट्सऐप पर जुड़ें',
       whatsappButton: 'व्हाट्सऐप संदेश भेजें',
@@ -605,9 +630,9 @@ export const translations = {
       services: 'सेवा',
       location: 'ठिकाण',
       contact: 'संपर्क',
-      bookPickup: 'पिकअप बुक करा',
+      bookPickup: 'आम्हाला संपर्क करा',
       languageLabel: 'भाषा',
-      phone: '+91 98765 43210'
+      phone: '+91 77700 99299'
     },
     welcome: {
       eyebrow: 'प्रीमियम वॉशर्स · लॉन्ड्री · ड्राय क्लिनर्स',
@@ -825,14 +850,14 @@ export const translations = {
       buttons: { '2d': '2D नकाशा दृश्य', '3d': '3D नकाशा दृश्य' },
       mapNote: '3D दृश्यासाठी Google Earth आवश्यक आहे. एम्बेडेड नकाशावर 3D बटण दाबा.',
       locationName: 'निरगुन वॉशर्स',
-      addressLine: 'तुमचा पत्ता येथे, शहर, राज्य - पिन कोड',
+      addressLine: 'Shop No. 135/6, Opp. Akurdi Railway Station (Backside), Near Vaishno Devi Mandir, Gurudwara Road, Akurdi, Pimpri-Chinchwad, Maharashtra 411033',
       contact: {
         phoneLabel: 'फोन',
         emailLabel: 'ईमेल',
-        hoursLabel: 'वेळ',
-        phoneValue: '+91 98765 43210',
-        emailValue: 'info@nirgunwashers.com',
-        hoursValue: 'सोमवार - रविवार: सकाळी 8 ते रात्री 8'
+        hoursLabel: 'व्यवसाय वेळ',
+        phoneValue: '+91 77700 99299',
+        emailValue: 'nirgunwashers@gmail.com',
+        hoursValue: 'सोमवार - रविवार: सकाळी 8:00 - रात्री 8:00'
       },
       directions: 'दिशा मिळवा',
       featuresHeading: 'आमच्या सुविधेच्या वैशिष्ट्या',
@@ -865,8 +890,7 @@ export const translations = {
         general: 'जनरल लॉन्ड्री',
         ironing: 'इस्त्री सेवा',
         dry: 'ड्राय क्लिनिंग',
-        special: 'विशेष सेवा',
-        pickup: 'पिकअप आणि डिलिव्हरी'
+        special: 'विशेष सेवा'
       },
       submit: 'विनंती पाठवा',
       success: 'संदेश यशस्वीपणे पाठवला. आम्ही लवकरच संपर्क करू.',
@@ -874,7 +898,7 @@ export const translations = {
       phoneNote: 'व्यवसाय वेळ: सोम-रवि, सकाळी 8 - रात्री 8',
       emailNote: 'प्रतिसाद वेळ: 24 तासांच्या आत',
       addressHeading: 'पत्ता',
-      addressLines: ['तुमचा व्यवसाय पत्ता', 'शहर, राज्य - पिन कोड', 'कार्यालयीन वेळ: रोज सकाळी 8 ते रात्री 8'],
+      addressLines: ['Shop No. 135/6, Opp. Akurdi Railway Station (Backside)', 'Near Vaishno Devi Mandir, Gurudwara Road, Akurdi', 'Pimpri-Chinchwad, Maharashtra 411033', 'कार्यालयीन वेळ: रोज सकाळी 8 ते रात्री 8'],
       whatsappHeading: 'व्हॉट्सअॅप',
       whatsappText: 'जलद मदतीसाठी व्हॉट्सअॅपवर संपर्क करा',
       whatsappButton: 'व्हॉट्सअॅप संदेश',

@@ -7,7 +7,7 @@
 }
 
 .contact-hero {
-  background: var(--color-ink);
+  background: #2d3748;
   color: #fff;
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 4vw, 3.5rem);
@@ -20,7 +20,7 @@
   content: '';
   position: absolute;
   inset: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: var(--radius-lg);
   pointer-events: none;
 }
@@ -50,10 +50,10 @@
 
 .contact-form-section,
 .contact-info-section {
-  background: #fff;
-  border-radius: 32px;
+  background: #2d3748;
+  border-radius: 4px;
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   box-shadow: var(--shadow-sm);
 }
 
@@ -61,7 +61,7 @@
 .contact-info-section h2 {
   font-size: 1.6rem;
   margin-bottom: 1rem;
-  color: var(--color-deep);
+  color: #ffffff;
 }
 
 .contact-form {
@@ -80,19 +80,20 @@
   font-size: 0.8rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-gold);
   font-weight: 700;
 }
 
 .form-group input,
 .form-group select,
 .form-group textarea {
-  border: 1px solid rgba(15, 23, 42, 0.12);
-  border-radius: 18px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
   padding: 0.9rem 1.1rem;
   font-family: inherit;
   font-size: 0.95rem;
-  background: rgba(249, 250, 251, 0.9);
+  background: #1a202c;
+  color: #ffffff;
   transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -100,9 +101,9 @@
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(0, 145, 199, 0.15);
-  background: #fff;
+  border-color: var(--color-gold);
+  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  background: #1a202c;
 }
 
 .form-group textarea {
@@ -112,13 +113,13 @@
 
 .submit-btn {
   border: none;
-  border-radius: 999px;
+  border-radius: 4px;
   padding: 0.95rem 1.5rem;
   font-weight: 700;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-  color: #fff;
+  background: var(--color-gold);
+  color: #0f1419;
   box-shadow: var(--shadow-sm);
   transition: transform 0.3s ease;
 }
@@ -136,9 +137,9 @@
 
 .info-box {
   padding: 1.4rem;
-  border-radius: 22px;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  background: var(--color-soft);
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: #1a202c;
   margin-bottom: 1rem;
 }
 
@@ -146,29 +147,29 @@
   font-size: 0.9rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-gold);
   margin-bottom: 0.5rem;
 }
 
 .info-box p {
-  color: var(--color-ink);
+  color: #ffffff;
   font-weight: 600;
 }
 
 .small-text {
   font-size: 0.75rem;
-  color: var(--color-muted) !important;
+  color: #cbd5e0 !important;
 }
 
 .info-box a {
-  color: var(--color-accent);
+  color: var(--color-gold);
   font-weight: 700;
 }
 
 .whatsapp-section {
   background: #25d366;
   color: #fff;
-  border-radius: 24px;
+  border-radius: 4px;
   padding: 1.5rem;
   text-align: center;
 }
@@ -179,7 +180,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.8rem 1.4rem;
-  border-radius: 999px;
+  border-radius: 4px;
   background: #fff;
   color: #25d366;
   font-weight: 700;
@@ -189,18 +190,18 @@
 
 .qr-section {
   margin-top: 1rem;
-  border-radius: 24px;
-  background: #fff;
+  border-radius: 4px;
+  background: #1a202c;
   padding: 1.5rem;
-  border: 1px dashed rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   text-align: center;
 }
 
 .qr-code-container {
   display: flex;
   justify-content: center;
-  background: var(--color-soft);
-  border-radius: 18px;
+  background: #2d3748;
+  border-radius: 4px;
   padding: 1rem;
 }
 
@@ -209,10 +210,10 @@
 }
 
 .social-container {
-  border-radius: 32px;
-  background: #fff;
+  border-radius: 4px;
+  background: #2d3748;
   padding: clamp(1.5rem, 3vw, 2.5rem);
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  border: 1px solid rgba(212, 175, 55, 0.15);
   box-shadow: var(--shadow-sm);
   text-align: center;
 }
@@ -228,7 +229,7 @@
 .social-link {
   width: 48px;
   height: 48px;
-  border-radius: 14px;
+  border-radius: 4px;
   display: grid;
   place-items: center;
   color: #fff;

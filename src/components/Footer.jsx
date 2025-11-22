@@ -27,13 +27,22 @@ export default function Footer() {
           </div>
           <div className="footer-section">
             <h4>{footerCopy.contactInfo}</h4>
-            <p>{footerCopy.addressLabel}: [Your Business Address]</p>
+            <p>{footerCopy.addressLabel}: Shop No. 135/6, Opp. Akurdi Railway Station (Backside), Near Vaishno Devi Mandir, Gurudwara Road, Akurdi, Pimpri-Chinchwad, Maharashtra 411033</p>
             <p>{footerCopy.phoneLabel}: {navCopy.phone}</p>
-            <p>{footerCopy.emailLabel}: info@nirgunwashers.com</p>
+            <p>{footerCopy.emailLabel}: nirgunwashers@gmail.com</p>
           </div>
         </div>
         <div className="footer-bottom">
           <p>{footerCopy.copyright(currentYear)}</p>
+          <p className="developer-credit">
+            Developed by Team <span className="team-sky">S.K.Y.
+              <span className="sky-tooltip">
+                <strong>S</strong> - Sarthak Kharche<br/>
+                <strong>K</strong> - Krushna Nirmalkar<br/>
+                <strong>Y</strong> - Yash Kumar Tripathi
+              </span>
+            </span>
+          </p>
         </div>
       </div>
     </footer>

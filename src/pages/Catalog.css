@@ -7,7 +7,7 @@
 }
 
 .catalog-hero {
-  background: var(--color-ink);
+  background: #2d3748;
   color: #fff;
   border-radius: var(--radius-lg);
   padding: clamp(2rem, 4vw, 3.5rem);
@@ -20,7 +20,7 @@
   content: '';
   position: absolute;
   inset: 22px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(212, 175, 55, 0.2);
   border-radius: var(--radius-lg);
   pointer-events: none;
 }
@@ -59,10 +59,10 @@
 
 .filter-btn {
   padding: 0.9rem 1.8rem;
-  border-radius: 999px;
-  border: 1px solid rgba(15, 23, 42, 0.1);
-  background: rgba(255, 255, 255, 0.9);
-  color: var(--color-muted);
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  background: #2d3748;
+  color: #cbd5e0;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -71,15 +71,15 @@
 }
 
 .filter-btn:hover {
-  border-color: var(--color-accent);
-  color: var(--color-ink);
+  border-color: var(--color-gold);
+  color: #ffffff;
   transform: translateY(-2px);
   box-shadow: var(--shadow-sm);
 }
 
 .filter-btn.active {
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-  color: #fff;
+  background: var(--color-gold);
+  color: #0f1419;
   border-color: transparent;
   box-shadow: var(--shadow-lg);
 }
@@ -91,24 +91,64 @@
 }
 
 .service-card {
-  border-radius: 28px;
+  border-radius: 4px;
   padding: 2rem;
-  background: #fff;
-  border: 1px solid rgba(15, 23, 42, 0.06);
-  box-shadow: var(--shadow-sm);
+  background: rgba(45, 55, 72, 0.4);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(212, 175, 55, 0.15);
+  box-shadow: var(--shadow-sm), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  position: relative;
+}
+
+.service-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.5rem;
+  padding: 14px;
+  border-radius: 4px;
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.service-icon svg {
+  width: 100%;
+  height: 100%;
+  color: var(--color-gold);
+  stroke-width: 1.5;
+}
+
+.service-card:hover .service-icon {
+  background: rgba(212, 175, 55, 0.2);
+  border-color: rgba(212, 175, 55, 0.5);
+  transform: scale(1.1) rotate(5deg);
+  box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+}
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   position: relative;
   overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg), var(--shadow-gold);
+  border-color: rgba(212, 175, 55, 0.4);
 }
 
 .service-card::after {
   content: '';
   position: absolute;
   inset: 1.5rem;
-  border-radius: 22px;
-  border: 1px solid rgba(0, 145, 199, 0.1);
+  border-radius: 4px;
+  border: 1px solid rgba(212, 175, 55, 0.1);
   pointer-events: none;
   z-index: 0;
 }
@@ -120,11 +160,11 @@
 
 .service-header h3 {
   font-size: 1.4rem;
-  color: var(--color-deep);
+  color: #ffffff;
 }
 
 .service-description {
-  color: var(--color-muted);
+  color: #cbd5e0;
   line-height: 1.6;
 }
 
@@ -132,18 +172,18 @@
   display: flex;
   align-items: baseline;
   gap: 0.4rem;
-  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
   padding-bottom: 1rem;
 }
 
 .price {
   font-size: 2.2rem;
   font-weight: 800;
-  color: var(--color-ink);
+  color: var(--color-gold);
 }
 
 .unit {
-  color: var(--color-muted);
+  color: #cbd5e0;
   font-weight: 600;
 }
 
@@ -157,15 +197,15 @@
   display: flex;
   gap: 0.8rem;
   align-items: center;
-  color: var(--color-muted);
+  color: #cbd5e0;
 }
 
 .checkmark {
   width: 18px;
   height: 18px;
   border-radius: 50%;
-  background: var(--color-accent);
-  color: #fff;
+  background: var(--color-gold);
+  color: #0f1419;
   font-size: 0.7rem;
   display: grid;
   place-items: center;
@@ -174,9 +214,9 @@
 .service-btn {
   align-self: flex-start;
   padding: 0.85rem 1.8rem;
-  border-radius: 999px;
-  background: linear-gradient(135deg, var(--color-accent), var(--color-accent-dark));
-  color: #fff;
+  border-radius: 4px;
+  background: var(--color-gold);
+  color: #0f1419;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -197,7 +237,7 @@
 .pricing-container h2 {
   font-size: clamp(2rem, 3vw, 2.6rem);
   text-align: center;
-  color: var(--color-deep);
+  color: #ffffff;
 }
 
 .info-grid {
@@ -207,10 +247,10 @@
 }
 
 .info-card {
-  border-radius: 24px;
+  border-radius: 4px;
   padding: 1.75rem;
-  background: #fff;
-  border: 1px solid rgba(15, 23, 42, 0.06);
+  background: #2d3748;
+  border: 1px solid rgba(212, 175, 55, 0.15);
   box-shadow: var(--shadow-sm);
 }
 
@@ -218,12 +258,12 @@
   font-size: 1rem;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--color-muted);
+  color: var(--color-gold);
   margin-bottom: 0.7rem;
 }
 
 .info-card p {
-  color: var(--color-ink);
+  color: #ffffff;
   font-weight: 600;
 }
 
